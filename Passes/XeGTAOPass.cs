@@ -56,7 +56,8 @@ namespace PEPEngineers.Passes
 		{
 			this.settings = settings;
 			renderPassEvent = evt;
-
+			
+			ConfigureInput(ScriptableRenderPassInput.Depth | ScriptableRenderPassInput.Normal);
 			shaders = GraphicsSettings.GetRenderPipelineSettings<XeGTAORuntimeShaders>();
 			renderFunc = Render;
 		}
